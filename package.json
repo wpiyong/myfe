@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --port=4200",
     "build": "npm run clean:dist && webpack",
     "server:prod": "http-server dist -c-1 --cors",
-    "pm2": "pm2 start /usr/bin/http-server -- -p 4200 -d false",
+    "pm2": "pm2 start server:prod",
     "pm2-restart": "pm2 restart http-server",
     "pm2mac": "pm2 start http-server -- -p 4200 -d false",
     "test": "karma start ./karma.conf.js",
