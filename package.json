@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --port=4200",
     "build": "npm run clean:dist && webpack",
     "build:prod": "npm run clean:dist && webpack -p",
-    "server:prod": "http-server dist -c-1 --cors -p 4200",
+    "server:prod": "http-server dist -c-1 --cors",
     "pm2": "pm2 start server:prod",
     "pm2-restart": "pm2 restart http-server",
     "pm2mac": "pm2 start http-server -- -p 4200 -d false",
