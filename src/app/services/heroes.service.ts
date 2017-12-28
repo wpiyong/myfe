@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpParams, HttpHeaders } from '@angular/common/http';
-//import { Observable } from 'rxjs/observable';
+import { Observable } from 'rxjs';
 
 interface HeroResponse {
     id: number,
@@ -39,8 +39,8 @@ export class HeroesService {
   private errorHandler(error: any) {
       console.log('raw error');
       console.log(error);
-      //let errMsgs = error.json();
-      //console.log(errMsgs);
-      //return Observable.throw(errMsgs);
+      let errMsgs = error.json();
+      console.log(errMsgs);
+      return Observable.throw(errMsgs);
   }
 }
