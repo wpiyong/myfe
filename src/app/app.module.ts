@@ -9,6 +9,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HomeComponent } from './home/home.component';
 import { HeroesService } from './services/heroes.service';
 import { HighlightDirective } from './directives/highlight.directive';
+import { SharedmoduleModule } from './sharedmodule/sharedmodule.module';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { HighlightDirective } from './directives/highlight.directive';
     RoutingModule,
     FormsModule,
     HttpClientModule,
+    SharedmoduleModule,
   ],
   providers: [HeroesService],
   bootstrap: [AppComponent]
