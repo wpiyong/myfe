@@ -1,15 +1,75 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1 Highlight>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="200" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+
+   	<nav class="navbar navbar-default navbar-fixed-top" id="my-navbar">
+  		<div class="container">
+  			<div class="navbar-header">
+  				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse" (click)="toggleCollapse()">
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  					<!-- <span class="icon-bar"></span> -->
+  				</button>
+
+  				<a href="" class="navbar-brand"><strong>Hello</strong></a>
+  			</div><!-- Navbar Header-->
+
+  			<div class="navbar-collapse" id="navbar-collapse" [class.collapse]="isCollapsed">
+				<!-- navbar button -->
+  				<a href="" class="btn btn-warning navbar-btn navbar-right">Download Now</a>
+  				<!-- navbar menu -->
+  				<ul class="nav navbar-nav navbar-right">
+  					<!-- <li><a href="#feedback">Feedback</a>
+  					<li><a href="#gallery">Gallery</a>
+  					<li><a href="#features">Features</a>
+  					<li><a href="#faq">Faq</a>
+  					<li><a href="#contact">ContactUs</a> -->
+
+  					<li class="dropdown" dropdown>
+	                    <a dropdownToggle role="button">Menu
+	                        <span class="caret"></span>
+	                    </a>
+	                    <ul *dropdownMenu class="dropdown-menu">
+	                        <li><a href="#feedback">Feedback</a></li>
+	                        <li><a href="#gallery">Gallery</a></li>
+	                        <li><a href="#features">Features</a></li>
+	                        <li><a href="#faq">FAQ</a></li>
+	                        <li><a href="#contact">ContactUs</a></li>
+	                    </ul>
+	                </li>
+  				</ul>
+  				<!-- navbar form -->
+  				<form class="navbar-form">
+			        <div class="form-group" style="display:inline;">
+			          <div class="input-group" style="display:table;">
+			          	<input class="form-control" name="search" placeholder="Search Here" autocomplete="off" autofocus="autofocus" type="text">
+			          	<span class="input-group-addon btn btn-info" style="width:1%;">Submit</span>
+			          </div>
+			        </div>
+			    </form>
+  			</div>
+
+  		</div><!-- End Container-->
+  	</nav><!-- End navbar -->
+<div style="margin-top: 50px;">
+<div class="jumbotron">
+	<div class="text-center">
+	  <h1 Highlight>
+	    Welcome to {{ title }}!
+	  </h1>
+	  <img width="200" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+	</div>
 </div>
-<div class="content">
-<nav>
-  <a routerLink="/home">Home</a>
-  <a routerLink="/heroes">Heroes</a>
-  <a routerLink="/groups">Groups</a>
-</nav>
-<router-outlet></router-outlet>
+	<div class="container">
+	<div class="panel panel-default">
+	<div class="panel-body">
+		<nav>
+		  <a routerLink="/home">Home</a>
+		  <a routerLink="/heroes">Heroes</a>
+		  <a routerLink="/groups">Groups</a>
+		</nav>
+	</div>
+	</div>
+	</div>
+	<router-outlet></router-outlet>
 </div>
+

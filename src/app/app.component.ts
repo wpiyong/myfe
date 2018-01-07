@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ANGULAR 4';
+  isCollapsed: boolean = true;
+
+  toggleCollapse(): void {
+    this.isCollapsed = !this.isCollapsed;
+  }
 }

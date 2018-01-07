@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { HeroesService } from './services/heroes.service';
 import { HighlightDirective } from './directives/highlight.directive';
 import { SharedmoduleModule } from './sharedmodule/sharedmodule.module';
+import { EventService } from './services/event.service';
+import { BootstrapModule } from './bootstrap/bootstrap.module';
 
 
 @NgModule({
@@ -25,8 +27,9 @@ import { SharedmoduleModule } from './sharedmodule/sharedmodule.module';
     FormsModule,
     HttpClientModule,
     SharedmoduleModule,
+    BootstrapModule,
   ],
-  providers: [HeroesService],
+  providers: [HeroesService, EventService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
