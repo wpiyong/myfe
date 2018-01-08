@@ -5,11 +5,13 @@ import { GroupRoutingModule } from './group-routing.module';
 import { GroupListComponent } from './group-list/group-list.component';
 import { GroupDetailComponent } from './group-detail/group-detail.component';
 import { GroupsComponent } from './groups.component';
+import { BootstrapModule } from '../bootstrap/bootstrap.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    GroupRoutingModule
+    GroupRoutingModule,
+    BootstrapModule
   ],
   declarations: [GroupListComponent, GroupDetailComponent, GroupsComponent]
 })
