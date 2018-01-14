@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { BsModalService} from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { ModalComponent } from '../modals/modal.component';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private bsModalService: BsModalService) { }
+  bsModalRef: BsModalRef;
 
   ngOnInit() {
   }
 
+  modalOpen() {
+      const list = [
+                    'Open a modal with component',
+                    'Pass your data',
+                    'Do something else',
+                    '...'
+                  ];
+      this.bsModalRef = this.bsModalService.show(ModalComponent);
+      this.bsModalRef.content.title = "Test";
+      this.bsModalRef.content.list = list;
+      setTimeout(() => {
+          list.push('PROFIT!!!');
+        }, 2000)
+  }
 }

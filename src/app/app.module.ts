@@ -12,6 +12,7 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { SharedmoduleModule } from './sharedmodule/sharedmodule.module';
 import { EventService } from './services/event.service';
 import { BootstrapModule } from './bootstrap/bootstrap.module';
+import { ModalComponent } from './modals/modal.component';
 
 
 @NgModule({
@@ -19,8 +20,10 @@ import { BootstrapModule } from './bootstrap/bootstrap.module';
     AppComponent,
     HeroesComponent,
     HomeComponent,
-    HighlightDirective
+    HighlightDirective,
+    ModalComponent
   ],
+  entryComponents: [ModalComponent],
   imports: [
     BrowserModule,
     RoutingModule,
