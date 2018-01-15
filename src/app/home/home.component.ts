@@ -10,24 +10,24 @@ import { ModalComponent } from '../modals/modal.component';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private bsModalService: BsModalService) { }
-  bsModalRef: BsModalRef;
+    constructor( private bsModalService: BsModalService ) { }
+    bsModalRef: BsModalRef;
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
-  modalOpen() {
-      const list = [
-                    'Open a modal with component',
-                    'Pass your data',
-                    'Do something else',
-                    '...'
-                  ];
-      this.bsModalRef = this.bsModalService.show(ModalComponent);
-      this.bsModalRef.content.title = "Test";
-      this.bsModalRef.content.list = list;
-      setTimeout(() => {
-          list.push('PROFIT!!!');
-        }, 2000)
-  }
+    modalOpen() {
+        const list = [
+            'Open a modal with component',
+            'Pass your data',
+            'Do something else',
+            '...'
+        ];
+        this.bsModalRef = this.bsModalService.show( ModalComponent );
+        this.bsModalRef.content.title = "Test";
+        this.bsModalRef.content.list = list;
+        setTimeout(() => {
+            list.push( 'PROFIT!!!' );
+        }, 2000 )
+    }
 }
