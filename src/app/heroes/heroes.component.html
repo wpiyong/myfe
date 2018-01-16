@@ -9,3 +9,26 @@
 	</div>
 </div>
 </div>
+<div class="container">
+	<accordion>
+		<accordion-group heading="first question?">
+		this is the answer.
+		</accordion-group>
+		<accordion-group heading="second question?">
+		this is the answer again.
+		</accordion-group>
+		<accordion-group>
+		<div accordion-heading class="clearfix">
+		third question third question third question third question third question? <span class="badge pull-right">5</span>
+		</div>
+		this is the answer for the third question.
+		</accordion-group>
+	</accordion>
+</div>
+<div class="container">
+	<button class="btn btn-warning" (click)="toggleCollapse()">collapse</button>
+	<br>
+	<div class="well" [collapse]="isCollapsed">
+	<div>contents</div>
+	</div>
+</div>

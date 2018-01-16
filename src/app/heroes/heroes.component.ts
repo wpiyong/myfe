@@ -13,9 +13,14 @@ export class HeroesComponent implements OnInit {
           name: 'Windstorm'
   };
 
+  isCollapsed: boolean = true;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  toggleCollapse() {
+      this.isCollapsed = !this.isCollapsed;
+  }
 }

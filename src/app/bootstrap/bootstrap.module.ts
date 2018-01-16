@@ -18,7 +18,7 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     AccordionModule.forRoot()
   ],
   exports: [
-    BsDropdownModule, TooltipModule, ModalModule, CollapseModule, CarouselModule
+    BsDropdownModule, TooltipModule, ModalModule, CollapseModule, CarouselModule, AccordionModule
   ],
   declarations: []
 })

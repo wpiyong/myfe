@@ -13,6 +13,8 @@ export class HomeComponent implements OnInit {
     constructor( private bsModalService: BsModalService ) { }
     bsModalRef: BsModalRef;
 
+    isCollapsed:boolean = true;
+    highlightColor:string = '#c9e0f2';
     ngOnInit() {
     }
 

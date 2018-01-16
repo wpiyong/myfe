@@ -3,25 +3,64 @@
 		<div class="panel-body">
 
 			<h3>card</h3>
-			<p>
-		  	home works!
-			</p>
+			<p>home works!</p>
 			<div class="button-group">
-			<button class="btn btn-primary" (click)="modalOpen()">Open Modal</button>
-			<div dropdown class="dropdown clearfix btn">
-			<button dropdownToggle class="btn btn-primary dropdown-toggle">
-			    Button dropdown <span class="caret"></span>
-			  </button>
-			  <ul *dropdownMenu class="dropdown-menu" role="menu">
-			    <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-			    <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-			    <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
-			    <li class="divider dropdown-divider"></li>
-			    <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
-			    </li>
-			  </ul>
-			  </div>
+				<button class="btn btn-primary" (click)="modalOpen()">Open
+					Modal</button>
+				<div dropdown class="dropdown clearfix btn">
+					<button dropdownToggle class="btn btn-primary dropdown-toggle">
+						Button dropdown <span class="caret"></span>
+					</button>
+					<ul *dropdownMenu class="dropdown-menu" role="menu">
+						<li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+						<li role="menuitem"><a class="dropdown-item" href="#">Another
+								action</a></li>
+						<li role="menuitem"><a class="dropdown-item" href="#">Something
+								else here</a></li>
+						<li class="divider dropdown-divider"></li>
+						<li role="menuitem"><a class="dropdown-item" href="#">Separated
+								link</a></li>
+					</ul>
+				</div>
 			</div>
+			<hr>
+			<ul class="list-unstyled">
+				<li>Home</li>
+				<li>Products</li>
+				<li>About Us</li>
+				<li>Contact Us</li>
+			</ul>
+			<ul class="list-group">
+				<li class="list-group-item"><span class="glyphicon glyphicon-home"></span>  Home<span class="badge">5</span></li>
+				<li class="list-group-item"><span class="glyphicon glyphicon-home"></span>  Products<span class="badge">10</span></li>
+				<li class="list-group-item"><span class="glyphicon glyphicon-home"></span>  About Us<span class="badge">0</span></li>
+				<li class="list-group-item"><span class="glyphicon glyphicon-home"></span>  Contact Us<span class="badge">3</span></li>
+			</ul>
+			<ul class="list-inline">
+				<li>Home</li>
+				<li>Products</li>
+				<li>About Us</li>
+				<li>Contact Us</li>
+			</ul>
+			<hr>
+			<!-- navbar -->
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse" (click)="isCollapsed=!isCollapsed">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand">Brand</a>
+				</div>
+				<div id="nav-collapse" class="navbar-collapse collapse" [collapse]="isCollapsed">
+					<ul class="nav navbar-nav">
+						<li [hoverhighlight]="highlightColor"><a>Home</a></li>
+						<li [hoverhighlight]="highlightColor"><a>Profile</a></li>
+						<li [hoverhighlight]="highlightColor"><a>Messages</a></li>
+					</ul>
+				</div>
+			</nav>
 		</div>
 	</div>
 </div>

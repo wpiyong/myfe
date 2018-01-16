@@ -13,6 +13,7 @@ import { SharedmoduleModule } from './sharedmodule/sharedmodule.module';
 import { EventService } from './services/event.service';
 import { BootstrapModule } from './bootstrap/bootstrap.module';
 import { ModalComponent } from './modals/modal.component';
+import { HoverhighlightDirective } from './directives/hoverhighlight.directive';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ModalComponent } from './modals/modal.component';
     HeroesComponent,
     HomeComponent,
     HighlightDirective,
-    ModalComponent
+    ModalComponent,
+    HoverhighlightDirective
   ],
   entryComponents: [ModalComponent],
   imports: [
